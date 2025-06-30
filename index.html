@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Tasks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      padding: 20px;
+    }
+    h2 {
+      color: #007acc;
+    }
+    .info {
+      background: #fff;
+      padding: 15px;
+      border-left: 5px solid #007acc;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h2>JavaScript Tasks Output → Check Console</h2>
+  <div class="info">
+    Open browser developer tools (press <strong>F12</strong> or <strong>Ctrl + Shift + I</strong>) and go to the <strong>Console</strong> tab to view the outputs.
+  </div>
+
+  <script>
+    // 1. Print Name and Address
+    let name = "subhash kumar ray ";
+    let address = "Vill-Balanpatti, PO-Tengrar, PS-Khutauna, Dist-Madhubani, Pin Code-847409 (Bihar)";
+    console.log("1. Name:", name);
+    console.log("   Address:", address);
+
+    // 2. Check value and data type
+    function isSameValueAndType(a, b) {
+      return a === b;
+    }
+    console.log("2. isSameValueAndType(5, '5'):", isSameValueAndType(5, '5'));
+    console.log("   isSameValueAndType(5, 5):", isSameValueAndType(5, 5));
+
+    // 3. Add two strings and capitalize
+    function addStringsUpper(str1, str2) {
+      return (str1 + str2).toUpperCase();
+    }
+    console.log("3. addStringsUpper('web', 'dev'):", addStringsUpper('web', 'dev'));
+
+    // 4. Length of string in bytes
+    function stringLengthInBytes(str) {
+      return new TextEncoder().encode(str).length;
+    }
+    console.log("4. stringLengthInBytes('hello'):", stringLengthInBytes('hello'), "bytes");
+
+    // 5. Round a number to specified digits
+    function roundToDigits(num, digits) {
+      return Number(num.toFixed(digits));
+    }
+    console.log("5. roundToDigits(7.58432, 2):", roundToDigits(7.58432, 2));
+  </script>
+</body>
+</html>
