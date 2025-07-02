@@ -1,63 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>JavaScript Tasks</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #333;
-      padding: 20px;
-    }
-    h2 {
-      color: #007acc;
-    }
-    .info {
-      background: #fff;
-      padding: 15px;
-      border-left: 5px solid #007acc;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-  </style>
+  <title>JS Tasks</title>
 </head>
 <body>
-  <h2>JavaScript Tasks Output → Check Console</h2>
-  <div class="info">
-    Open browser developer tools (press <strong>F12</strong> or <strong>Ctrl + Shift + I</strong>) and go to the <strong>Console</strong> tab to view the outputs.
-  </div>
+  <h2>1. Print Name and Address</h2>
+  <div id="output1"></div>
 
   <script>
-    // 1. Print Name and Address
-    let name = "subhash kumar ray ";
-    let address = "Vill-Balanpatti, PO-Tengrar, PS-Khutauna, Dist-Madhubani, Pin Code-847409 (Bihar)";
-    console.log("1. Name:", name);
-    console.log("   Address:", address);
-
-    // 2. Check value and data type
-    function isSameValueAndType(a, b) {
-      return a === b;
-    }
-    console.log("2. isSameValueAndType(5, '5'):", isSameValueAndType(5, '5'));
-    console.log("   isSameValueAndType(5, 5):", isSameValueAndType(5, 5));
-
-    // 3. Add two strings and capitalize
-    function addStringsUpper(str1, str2) {
-      return (str1 + str2).toUpperCase();
-    }
-    console.log("3. addStringsUpper('web', 'dev'):", addStringsUpper('web', 'dev'));
-
-    // 4. Length of string in bytes
-    function stringLengthInBytes(str) {
-      return new TextEncoder().encode(str).length;
-    }
-    console.log("4. stringLengthInBytes('hello'):", stringLengthInBytes('hello'), "bytes");
-
-    // 5. Round a number to specified digits
-    function roundToDigits(num, digits) {
-      return Number(num.toFixed(digits));
-    }
-    console.log("5. roundToDigits(7.58432, 2):", roundToDigits(7.58432, 2));
+    const name = "John Doe";
+    const address = "123 Main St, Springfield";
+    document.getElementById("output1").innerHTML = `Name: ${name}<br>Address: ${address}`;
   </script>
+  <h2>2. Check Value and Data Type</h2>
+<div id="output2"></div>
+
+<script>
+  const var1 = 100;
+  const var2 = "100";
+
+  const result = (var1 === var2);
+  document.getElementById("output2").innerText = `Are value and data type same? ${result}`;
+</script>
+<h2>3. Add Two Strings in Uppercase</h2>
+<div id="output3"></div>
+
+<script>
+  const str1 = "hello";
+  const str2 = "world";
+
+  const combined = (str1 + str2).toUpperCase();
+  document.getElementById("output3").innerText = `Combined String: ${combined}`;
+</script>
+<h2>4. Convert String Length to Bytes</h2>
+<div id="output4"></div>
+
+<script>
+  function getBytesLength(str) {
+    return new TextEncoder().encode(str).length;
+  }
+
+  const inputString = "Hello!";
+  const bytes = getBytesLength(inputString);
+  document.getElementById("output4").innerText = `Length in bytes: ${bytes}`;
+</script>
+<h2>5. Round Number to Digits</h2>
+<div id="output5"></div>
+
+<script>
+  function roundTo(num, digits) {
+    return Number(num.toFixed(digits));
+  }
+
+  const number = 3.1415926535;
+  const rounded = roundTo(number, 3);
+  document.getElementById("output5").innerText = `Rounded Number: ${rounded}`;
+</script>
+
+
+
 </body>
 </html>
